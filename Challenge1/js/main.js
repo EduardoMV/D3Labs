@@ -1,6 +1,6 @@
 var svg = d3.select("#chart-area")
   .append("svg")
-  .attr("width", 400)
+  .attr("width", 500)
   .attr("height", 400);
 
 d3.json("../data/buildings.json").then((data)=> {
@@ -28,11 +28,11 @@ d3.json("../data/buildings.json").then((data)=> {
 		.data(data)
 		.enter()
 		.append("text")
-		.attr("x", (d, i) => i * (100) + 50)
+		.attr("x", (d, i) => i * (90) + 15)
 		.attr("y", 390)
 		.attr("text-anchor", "middle")
 		.attr("class", "label")
-		.text(d => d.name);
+		.text(d => d.country);
 
 }).catch((error) => {
 	console.error("404 JSON file not found", error);
