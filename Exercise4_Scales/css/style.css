@@ -1,0 +1,14 @@
+svg {
+	margin: 20px;
+}
+
+rect {
+	stroke: black;
+	stroke-width: 1;
+  }
+  
+  text.label {
+	font-size: 12px;
+	font-family: 'Arial, sans-serif';
+	fill: black;
+  }

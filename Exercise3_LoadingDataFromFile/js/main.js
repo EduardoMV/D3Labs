@@ -23,7 +23,7 @@ d3.json("../data/ages.json").then((data)=> {
   .append("circle")
   .attr("cx", (d, i) => i * 60 + 30)
   .attr("cy", d => 150)
-  .attr("r", 25)
+  .attr("r", d => d.age * 2)
   .attr("fill", d => d.age > 10 ? "darkblue" : "steelblue");
 
 }).catch((error) => {
