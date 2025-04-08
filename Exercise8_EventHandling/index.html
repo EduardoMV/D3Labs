@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Leaf Project</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img id="logo" src="img/logo.png" alt="Logo"></a>
+            <div class="navbar-form navbar-right">
+                <div class="form-group">
+                    <select id="continent-filter" class="form-control">
+                        <option value="All">All Continents</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="controls">
+                    <button id="play-button" class="btn btn-success">
+                        <i class="fas fa-play"></i> Play
+                    </button>
+                    <button id="pause-button" class="btn btn-warning">
+                        <i class="fas fa-pause"></i> Pause
+                    </button>
+                    <button id="reset" class="btn btn-default">
+                        <i class="fas fa-rotate-left"></i> Reset
+                    </button>
+                    <div id="slider-container" style="display: inline-block; width: 300px; margin-left: 20px;">
+                        <input type="range" id="year-slider" min="0" max="100" value="0" class="form-control">
+                        <span id="slider-value" class="label label-default" style="margin-left: 10px;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="chart-area"></div>
+        </div>
+    </div>
+
+    <div id="tooltip" class="hidden">
+        <p><strong>Country:</strong> <span id="country"></span></p>
+        <p><strong>Continent:</strong> <span id="continent"></span></p>
+        <p><strong>Income:</strong> $<span id="income"></span></p>
+        <p><strong>Life Expectancy:</strong> <span id="life-exp"></span> years</p>
+        <p><strong>Population:</strong> <span id="population"></span></p>
+    </div>
+
+    <!-- JS dependencies -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
